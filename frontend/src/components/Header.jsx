@@ -20,7 +20,14 @@ const Header = () => {
         <NavLink to="/create">Create</NavLink>
         <NavLink to="/support">Support</NavLink>
       </Menu>
-      <Account>account</Account>
+      <Account>
+        <Profile>
+          <img src="account.png" alt="" />
+        </Profile>
+        <Wallet>
+          <img src="wallet.png" alt="" />
+        </Wallet>
+      </Account>
     </Container>
   );
 };
@@ -95,5 +102,35 @@ const Menu = styled.div`
 const Account = styled.div`
   width: 15%;
   margin-right: 2rem;
-  border: 2px solid black;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-evenly;
+`;
+
+const Profile = styled.div`
+  width: 4rem;
+  height: 4rem;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 0.4rem 0.2rem gray;
+  border-radius: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 100%;
+  }
+  cursor: pointer;
+`;
+const Wallet = styled.div`
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
 `;
