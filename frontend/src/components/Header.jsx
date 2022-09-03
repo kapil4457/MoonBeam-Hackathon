@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <Container>
@@ -12,7 +13,13 @@ const Header = () => {
         <input type="text" placeholder="Search Items" />
         <p></p>
       </Search>
-      <Menu>menu</Menu>
+      <Menu>
+        <NavLink to="/" activeClassName="active">
+          Explore
+        </NavLink>
+        <NavLink to="/create">Create</NavLink>
+        <NavLink to="/support">Support</NavLink>
+      </Menu>
       <Account>account</Account>
     </Container>
   );
@@ -26,8 +33,9 @@ const Container = styled.div`
   align-items: center;
   height: 6rem;
   gap: 2rem;
-  box-shadow: 3px 3px 3px 4px rgba(0, 0, 0);
+  box-shadow: 2px 2px 20px 4px rgba(0, 0, 0, 0.5);
   overflow-y: hidden;
+  border-bottom: 0px solid rgba(0, 0, 0, 0.5);
 `;
 const Logo = styled.div`
   padding-left: 2rem;
@@ -71,8 +79,18 @@ const Search = styled.div`
   }
 `;
 const Menu = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   width: 33%;
-  border: 2px solid black;
+  height: 100%;
+  a {
+    height: 100%;
+    padding-top: 2rem;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+  }
 `;
 const Account = styled.div`
   width: 15%;
