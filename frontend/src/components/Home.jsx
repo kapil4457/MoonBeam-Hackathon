@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Header from "./Header";
+import HomePageCard from "./HomePageCard";
 
 const Home = () => {
   return (
@@ -9,6 +9,9 @@ const Home = () => {
         <Heading>
           <p>MarketPlace</p>
         </Heading>
+        <CardHolder>
+          <HomePageCard />
+        </CardHolder>
       </Container>
     </>
   );
@@ -30,6 +33,12 @@ const Heading = styled.div`
     font-size: 2.7rem;
     font-weight: 550;
     text-decoration: underline;
-    text-shadow: 2px 3px 8px gray;
+    text-shadow: 2px 5px 6px gray;
   }
+`;
+
+const CardHolder = styled.div`
+  width: 100%;
+  display: grid;
+  padding: 4rem 4rem;
 `;

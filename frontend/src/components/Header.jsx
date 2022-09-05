@@ -36,13 +36,13 @@ export default Header;
 
 const Container = styled.div`
   display: flex;
-  width: 100%;
+  width: 100vw;
   align-items: center;
   height: 6rem;
   gap: 2rem;
   box-shadow: 2px 2px 20px 4px rgba(0, 0, 0, 0.5);
   overflow-y: hidden;
-  border-bottom: 0px solid rgba(0, 0, 0, 0.5);
+  // border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 `;
 const Logo = styled.div`
   padding-left: 2rem;
