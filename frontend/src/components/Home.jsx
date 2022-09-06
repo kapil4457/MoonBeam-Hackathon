@@ -10,7 +10,17 @@ const Home = () => {
           <p>MarketPlace</p>
         </Heading>
         <CardHolder>
-          <HomePageCard />
+          <HomePageCard title="Bored Ape" image="temp.jpg" />
+          <HomePageCard title="Bored Ape" image="temp.jpg" />
+          <HomePageCard title="Bored Ape" image="temp.jpg" />
+          <HomePageCard title="Bored Ape" image="temp.jpg" />
+          <HomePageCard title="Bored Ape" image="temp.jpg" />
+          <HomePageCard title="Bored Ape" image="temp.jpg" />
+          <HomePageCard title="Bored Ape" image="temp.jpg" />
+          <HomePageCard title="Bored Ape" image="temp.jpg" />
+          <HomePageCard title="Bored Ape" image="temp.jpg" />
+          <HomePageCard title="Bored Ape" image="temp.jpg" />
+          <HomePageCard title="Bored Ape" image="temp.jpg" />
         </CardHolder>
       </Container>
     </>
@@ -27,7 +37,7 @@ const Heading = styled.div`
   height: 100%;
   width: 100%;
   padding-top: 4rem;
-  padding-left: 3rem;
+  padding-left: 10rem;
   p {
     width: 100%;
     font-size: 2.7rem;
@@ -39,6 +49,14 @@ const Heading = styled.div`
 
 const CardHolder = styled.div`
   width: 100%;
+  height: 100%;
   display: grid;
-  padding: 4rem 4rem;
+  padding-top: 6rem;
+  padding-left: 13rem;
+  align-items: center;
+  place-items: center;
+  grid-template-columns: repeat(4, 20%);
+  overflow-x: hidden;
+  gap: 3rem;
+  padding-bottom: 5rem;
 `;
