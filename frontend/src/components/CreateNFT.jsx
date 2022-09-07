@@ -5,7 +5,7 @@ const CreateNFT = () => {
   const [img, setImg] = useState();
   const [name, setName] = useState("");
   const [desc, setDesc] = useState("");
-  const [price, setEth] = useState(0);
+  const [price, setEth] = useState(1);
   const onImageChange = (e) => {
     const [file] = e.target.files;
     setImg(URL.createObjectURL(file));
