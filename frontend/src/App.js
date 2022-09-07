@@ -3,6 +3,7 @@ import Header from './components/Header';
 import {Routes , Route} from 'react-router-dom';
 import Home from './components/Home';
 import CreateNFT from './components/CreateNFT';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
     <Route path="/" element={<Home />} />
     <Route path="/create" element={<CreateNFT />} />
     </Routes>
+    <Footer />
     </>
   );
 }
