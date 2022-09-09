@@ -12,7 +12,7 @@ const Profile = () => {
 
   const converted = async (e) => {
     const api_key = "af20fe15-8a01-468b-bc66-433029045137";
-    setChangingCurrency(e.target.value);
+    setChangingCurrency(e);
     const options = {
       method: "GET",
       url: `https://api.simpleswap.io/v1/get_estimated?api_key=${api_key}&fixed=&currency_from=${currentCurrency}&currency_to=${changingCurrency}&amount=${currentVal}`,
@@ -55,7 +55,10 @@ const Profile = () => {
             <b>Profile Value</b>
             <p>
               <p>{Math.floor(currentVal)} </p>
-              <select onChange={(e) => converted(e)} value={changingCurrency}>
+              <select
+                onChange={(e) => converted(e.target.value)}
+                value={changingCurrency}
+              >
                 {currencies.map((currency) => {
                   return <option value={currency}>{currency}</option>;
                 })}
