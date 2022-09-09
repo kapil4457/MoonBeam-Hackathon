@@ -7,6 +7,8 @@ const CreateNFT = () => {
   const [desc, setDesc] = useState("");
   const [cate, setCate] = useState("");
   const [price, setEth] = useState(1);
+  const currencies = ["BTC", "ETH", "USD", "XRP", "LTC", "ADA"];
+
   const onImageChange = (e) => {
     const [file] = e.target.files;
     setImg(URL.createObjectURL(file));
@@ -72,14 +74,23 @@ const CreateNFT = () => {
               setDesc(e.target.value);
             }}
           />
-          <input
-            value={price}
-            type="number"
-            placeholder="Price in Eth"
-            onChange={(e) => {
-              setEth(e.target.value);
-            }}
-          />
+          <div>
+            <input
+              value={price}
+              type="number"
+              placeholder="Price"
+              className="option"
+              onChange={(e) => {
+                setEth(e.target.value);
+              }}
+            />
+
+            <select name="" id="">
+              {currencies.map((currency) => {
+                return <option value={currency}>{currency}</option>;
+              })}
+            </select>
+          </div>
           <input
             type="text"
             placeholder="Category"
@@ -88,6 +99,7 @@ const CreateNFT = () => {
               setCate(e.target.value);
             }}
           />
+
           <button onClick={submitHandler}>Create</button>
         </Info>
       </Main>
@@ -182,7 +194,7 @@ const Info = styled.div`
   height: 100%;
   padding-top: 4rem;
   width: 45%;
-  gap: 3rem;
+  gap: 1.4rem;
   align-items: center;
   justify-content: center;
   input::-webkit-outer-spin-button,
@@ -201,6 +213,32 @@ const Info = styled.div`
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 0.7rem;
     padding: 0 0.8rem;
+  }
+
+  div {
+    input {
+      font-size: 1.5rem;
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 0.7rem;
+    }
+    height: 3rem;
+    width: 100%;
+  }
+  .option {
+    width: 50%;
+  }
+  select {
+    width: 30%;
+    // text-align: center;
+    height: 2.4rem;
+    border: none;
+    color: gray;
+    outline: none;
+    font-size: 1.4rem;
   }
 
   textarea {
