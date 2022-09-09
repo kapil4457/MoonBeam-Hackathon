@@ -2,7 +2,6 @@ import React from "react";
 import { SpeedDial, SpeedDialAction, SpeedDialIcon } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
 import Person3Icon from "@mui/icons-material/Person3";
-import CollectionsIcon from "@mui/icons-material/Collections";
 import { NavLink } from "react-router-dom";
 
 const speedDial = () => {
@@ -27,18 +26,6 @@ const speedDial = () => {
           </NavLink>
         }
         tooltipTitle="Acount"
-      />
-      <SpeedDialAction
-        icon={
-          <NavLink
-            to="/collection"
-            activeClassName="none"
-            style={{ textDecoration: "none" }}
-          >
-            <CollectionsIcon />
-          </NavLink>
-        }
-        tooltipTitle="My NFT'S"
       />
 
       <SpeedDialAction

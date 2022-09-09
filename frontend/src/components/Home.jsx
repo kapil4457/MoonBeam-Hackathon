@@ -34,13 +34,13 @@ const Container = styled.div`
   height: 100%;
 `;
 const Heading = styled.div`
-  height: 100%;
-  width: 100%;
-  padding-top: 4rem;
-  padding-left: 10rem;
+  height: 7rem;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   p {
-    width: 100%;
-    font-size: 2.7rem;
+    font-size: 3rem;
     font-weight: 550;
     text-decoration: underline;
     text-shadow: 2px 5px 6px gray;

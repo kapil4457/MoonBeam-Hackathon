@@ -93,36 +93,12 @@ const Menu = styled.div`
   height: 100%;
   a {
     height: 100%;
-    padding-top: 2rem;
     text-decoration: none;
     color: black;
     font-size: 1.5rem;
   }
 `;
-const Account = styled.div`
-  width: 15%;
-  margin-right: 2rem;
-  display: flex;
-  gap: 1rem;
-  justify-content: space-evenly;
-`;
 
-const Profile = styled.div`
-  width: 4rem;
-  height: 4rem;
-  padding: 0.5rem;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 1px 1px 0.4rem 0.2rem gray;
-  border-radius: 100%;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    border-radius: 100%;
-  }
-  cursor: pointer;
-`;
 const Wallet = styled.div`
   width: 4rem;
   height: 4rem;
