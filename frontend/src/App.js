@@ -4,10 +4,13 @@ import {Routes , Route} from 'react-router-dom';
 import Home from './components/Home';
 import CreateNFT from './components/CreateNFT';
 import Footer from './components/Footer';
+import SpeedDialComponent from './components/SpeedDialComponent';
 
 function App() {
   return (
     <>
+    <SpeedDialComponent />
+
     <Header />
 
     <Routes>

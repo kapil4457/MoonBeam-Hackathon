@@ -1,10 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+
 const Header = () => {
+  const navigate = useNavigate();
+  const redirect = () => {
+    navigate("/");
+  };
   return (
     <Container>
-      <Logo>
+      <Logo onClick={redirect}>
         <img src="logo.png" alt="" />
         <p>NFT Exchange</p>
       </Logo>
@@ -20,14 +25,6 @@ const Header = () => {
         <NavLink to="/create">Create</NavLink>
         <NavLink to="/support">Support</NavLink>
       </Menu>
-      <Account>
-        <Profile>
-          <img src="account.png" alt="" />
-        </Profile>
-        <Wallet>
-          <img src="wallet.png" alt="" />
-        </Wallet>
-      </Account>
     </Container>
   );
 };
@@ -43,10 +40,12 @@ const Container = styled.div`
   box-shadow: 2px 2px 20px 4px rgba(0, 0, 0, 0.5);
   overflow-y: hidden;
   margin-bottom: 2rem;
+  justify-content: space-between;
   // border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 `;
 const Logo = styled.div`
   padding-left: 2rem;
+  cursor: pointer;
   width: 20%;
   align-items: center;
   display: flex;
@@ -61,7 +60,7 @@ const Logo = styled.div`
 `;
 const Search = styled.div`
   position: relative;
-  width: 30%;
+  width: 40%;
   box-shadow: 0px 1px 3px 1px rgba(12, 12, 12, 0.5);
   border-radius: 1rem;
 
@@ -73,14 +72,14 @@ const Search = styled.div`
     align-items: center;
     display: flex;
     gap: 1rem;
-    background-color: rgba(218, 209, 209, 0.8);
+    background-color: rgba(218, 209, 209, 0.3);
     border-radius: 1rem;
     border: 0;
     outline: 0;
   }
   img {
     position: absolute;
-    background-color: rgba(218, 209, 209);
+    background-color: transparent;
     top: 10px;
     left: 15px;
     height: 1.3rem;
