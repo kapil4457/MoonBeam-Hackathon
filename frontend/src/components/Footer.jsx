@@ -49,8 +49,6 @@ const Contact = styled.div`
     font-weight: 500;
     text-shadow: 1px 1px 1px gray;
   }
-  p {
-  }
 `;
 const Socials = styled.div`
   display: flex;

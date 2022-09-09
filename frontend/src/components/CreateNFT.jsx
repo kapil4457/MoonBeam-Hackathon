@@ -5,6 +5,7 @@ const CreateNFT = () => {
   const [img, setImg] = useState();
   const [name, setName] = useState("");
   const [desc, setDesc] = useState("");
+  const [cate, setCate] = useState("");
   const [price, setEth] = useState(1);
   const onImageChange = (e) => {
     const [file] = e.target.files;
@@ -28,6 +29,10 @@ const CreateNFT = () => {
     }
     if (desc == "") {
       console.log("Please Enter a Description for the NFT");
+      return;
+    }
+    if (cate == "") {
+      console.log("Please Enter a Category for the NFT");
       return;
     }
 
@@ -59,7 +64,7 @@ const CreateNFT = () => {
               setName(e.target.value);
             }}
           />
-          <input
+          <textarea
             type="text"
             value={desc}
             placeholder="Description"
@@ -73,6 +78,14 @@ const CreateNFT = () => {
             placeholder="Price in Eth"
             onChange={(e) => {
               setEth(e.target.value);
+            }}
+          />
+          <input
+            type="text"
+            placeholder="Category"
+            value={cate}
+            onChange={(e) => {
+              setCate(e.target.value);
             }}
           />
           <button onClick={submitHandler}>Create</button>
@@ -127,7 +140,7 @@ const Image = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 9rem;
+    padding-left: 5rem;
     border-radius: 2rem;
   }
   button {
@@ -147,22 +160,29 @@ const Image = styled.div`
     border-bottom: 1px solid gray;
     border-radius: 2rem 2rem 0 0;
   }
-  input {
+
+  input::-webkit-file-upload-button {
+    background-color: rgb(173, 216, 230);
+    // background-color: rgba(0, 0, 0, 0.8);
+    // color: white;
     display: block;
-    color: transparent;
     font-size: 1.5rem;
     cursor: pointer;
-    border: 0px solid black;
+    border: none;
+    border-radius: 0.3rem;
+    border: 1px solid gray;
     outline: none;
-    width: 100%;
+    width: 15rem;
+    height: 3rem;
   }
 `;
 const Info = styled.div`
   display: flex;
   flex-direction: column;
-  height: 80%;
+  height: 100%;
+  padding-top: 4rem;
   width: 45%;
-  gap: 4rem;
+  gap: 3rem;
   align-items: center;
   justify-content: center;
   input::-webkit-outer-spin-button,
@@ -171,18 +191,25 @@ const Info = styled.div`
     margin: 0;
   }
 
-  input {
+  input,
+  textarea {
     font-size: 1.5rem;
     width: 100%;
-    height: 3rem;
+    height: 5rem;
     border: none;
     outline: none;
-    border-bottom: 1px solid gray;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.7rem;
+    padding: 0 0.8rem;
   }
 
+  textarea {
+    height: 8rem;
+    padding-top: 0.5rem;
+  }
   button {
     width: 60%;
-    height: 3rem;
+    height: 4rem;
     border: none;
     outline: none;
     background-color: rgba(155, 255, 138);

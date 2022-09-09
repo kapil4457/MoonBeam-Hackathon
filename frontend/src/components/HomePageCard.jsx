@@ -7,6 +7,7 @@ const HomePageCard = (props) => {
       <Image>
         <img src={props.image} />
       </Image>
+      <img src="avatar.jpg" alt="" className="owner" />
       <Heading>
         <h2>{props.title}</h2>
       </Heading>
@@ -23,10 +24,22 @@ const Container = styled.div`
   box-shadow: 2px 4px 4px 6px gray;
   cursor: pointer;
   transition: transform 0.3s;
+  position relative;
+
 
   &:hover {
     transform: scale(1.08);
     box-shadow: 2px 4px 6px 8px gray;
+  }
+  .owner{
+    position absolute;
+    height:4rem;
+    width:4rem;
+    bottom:3rem;
+    left:0.5rem;
+    border-radius:100%;
+    border:5px solid white  ;
+    box-shadow:1px 1px 5px 1px black;
   }
 `;
 const Image = styled.div`
