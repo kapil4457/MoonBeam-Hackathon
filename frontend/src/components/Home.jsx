@@ -11,26 +11,31 @@ const Home = () => {
       title: "Bored Ape 1",
       image: "temp.jpg",
       category: "Art",
+      nodeHashVal: 1,
     },
     {
       title: "Bored Ape 2",
       image: "temp.jpg",
       category: "Sports",
+      nodeHashVal: 2,
     },
     {
       title: "Bored Ape 3",
       image: "temp.jpg",
       category: "Music",
+      nodeHashVal: 3,
     },
     {
       title: "Bored Ape 3",
       image: "temp.jpg",
       category: "Trading",
+      nodeHashVal: 4,
     },
     {
       title: "Bored Ape 4",
       image: "temp.jpg",
       category: "Art",
+      nodeHashVal: 5,
     },
   ];
 
@@ -73,6 +78,7 @@ const Home = () => {
                 title={card.title}
                 image={card.image}
                 category={card.category}
+                nodeHashVal={card.nodeHashVal}
               />
             );
           })}

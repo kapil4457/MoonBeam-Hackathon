@@ -120,7 +120,6 @@ const Profile = () => {
             return (
               <OwnedNFT
                 name={eachNFT.name}
-                lastBid={eachNFT.lastBid}
                 HighestBid={eachNFT.HighestBid}
                 unit={eachNFT.unit}
                 purchaseDate={eachNFT.purchaseDate}

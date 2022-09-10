@@ -1,9 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const HomePageCard = (props) => {
+  const navigate = useNavigate();
+  const func = () => {
+    navigate(`/nft/${props.nodeHashVal}`);
+  };
   return (
-    <Container>
+    <Container onClick={() => func()}>
       <Image>
         <img src={props.image} />
       </Image>

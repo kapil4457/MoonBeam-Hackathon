@@ -17,9 +17,7 @@ const OwnedNFT = (props) => {
         <div>
           <b>Name : </b> {props.name}
         </div>
-        <div>
-          <b>Last Bid : </b> {props.lastBid}
-        </div>
+
         <div>
           <b>Highest Active Bid : </b> {props.HighestBid} {props.unit}
         </div>
