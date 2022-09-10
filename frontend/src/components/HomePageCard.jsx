@@ -23,13 +23,13 @@ const Container = styled.div`
   border-radius: 1rem;
   box-shadow: 2px 4px 4px 6px gray;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.5s;
   position relative;
 
 
   &:hover {
     transform: scale(1.08);
-    box-shadow: 2px 4px 6px 8px gray;
+    box-shadow: 2px 4px 20px 8px gray;
   }
   .owner{
     position absolute;

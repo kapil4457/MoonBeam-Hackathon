@@ -2,7 +2,51 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import styled from "styled-components";
+import OwnedNFT from "./OwnedNFT";
+
 const axios = require("axios");
+const nftList = [
+  {
+    name: "Bored Ape #1",
+    lastBid: "22",
+    HighestBid: "25",
+    unit: "Eth",
+    purchaseDate: "2/2/2022",
+    image: "temp.jpg",
+  },
+  {
+    name: "Bored Ape #2",
+    lastBid: "22",
+    HighestBid: "25",
+    unit: "Eth",
+    purchaseDate: "2/2/2022",
+    image: "temp.jpg",
+  },
+  {
+    name: "Bored Ape #3",
+    lastBid: "22",
+    HighestBid: "25",
+    unit: "Eth",
+    purchaseDate: "2/2/2022",
+    image: "temp.jpg",
+  },
+  {
+    name: "Bored Ape #4",
+    lastBid: "22",
+    HighestBid: "25",
+    unit: "Eth",
+    purchaseDate: "2/2/2022",
+    image: "temp.jpg",
+  },
+  {
+    name: "Bored Ape #5",
+    lastBid: "22",
+    HighestBid: "25",
+    unit: "Eth",
+    purchaseDate: "2/2/2022",
+    image: "temp.jpg",
+  },
+];
 
 const Profile = () => {
   const currencies = ["BTC", "ETH", "USD", "XRP", "LTC", "ADA"];
@@ -33,41 +77,59 @@ const Profile = () => {
   useEffect(() => {}, [currentVal]);
 
   return (
-    <Container>
-      <Data>
-        <Image>
-          <img src="avatar.jpg" alt="" />
-        </Image>
-        <Info>
-          <Name>
-            <b>Name</b>
-            <p>Kapil Soni</p>
-          </Name>
-          <JoinedOn>
-            <b> Joined On</b>
-            <p>2/3/22</p>
-          </JoinedOn>
-          <NFTOwned>
-            <b>NFT's Owned</b>
-            <p>2</p>
-          </NFTOwned>
-          <ProfileValue>
-            <b>Profile Value</b>
-            <p>
-              <p>{Math.floor(currentVal)} </p>
-              <select
-                onChange={(e) => converted(e.target.value)}
-                value={changingCurrency}
-              >
-                {currencies.map((currency) => {
-                  return <option value={currency}>{currency}</option>;
-                })}
-              </select>
-            </p>
-          </ProfileValue>
-        </Info>
-      </Data>
-    </Container>
+    <>
+      <Container>
+        <Data>
+          <Image>
+            <img src="avatar.jpg" alt="" />
+          </Image>
+          <Info>
+            <Name>
+              <b>Name</b>
+              <p>Kapil Soni</p>
+            </Name>
+            <JoinedOn>
+              <b> Joined On</b>
+              <p>2/3/22</p>
+            </JoinedOn>
+            <NFTOwned>
+              <b>NFT's Owned</b>
+              <p>2</p>
+            </NFTOwned>
+            <ProfileValue>
+              <b>Profile Value</b>
+              <p>
+                <p>{Math.floor(currentVal)} </p>
+                <select
+                  onChange={(e) => converted(e.target.value)}
+                  value={changingCurrency}
+                >
+                  {currencies.map((currency) => {
+                    return <option value={currency}>{currency}</option>;
+                  })}
+                </select>
+              </p>
+            </ProfileValue>
+          </Info>
+        </Data>
+      </Container>
+      <OwnedNft>
+        <Heading>Owned NFT's</Heading>
+        <NFTS>
+          {nftList.map((eachNFT) => {
+            return (
+              <OwnedNFT
+                name={eachNFT.name}
+                lastBid={eachNFT.lastBid}
+                HighestBid={eachNFT.HighestBid}
+                unit={eachNFT.unit}
+                purchaseDate={eachNFT.purchaseDate}
+              />
+            );
+          })}
+        </NFTS>
+      </OwnedNft>
+    </>
   );
 };
 
@@ -78,6 +140,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 3.3rem;
 `;
 
 const Data = styled.div`
@@ -143,4 +206,27 @@ const ProfileValue = styled.div`
     outline: none;
     font-size: 2.3rem;
   }
+`;
+
+const OwnedNft = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+`;
+const Heading = styled.div`
+  width: 100%;
+  padding-left: 5rem;
+  font-size: 3rem;
+  font-weight: bold;
+  text-decoration: underline;
+`;
+const NFTS = styled.div`
+  display: grid;
+  width: 100%;
+  grid-template-columns: 50% 50%;
+  grid-row-gap: 4rem;
+  justify-items: center;
+  align-items: center;
 `;
