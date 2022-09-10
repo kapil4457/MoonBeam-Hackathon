@@ -137,7 +137,7 @@ const Image = styled.div`
   }
 
   &:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
     box-shadow: 0.5rem 0.5rem 1.3rem 0.3rem gray;
   }
 `;
