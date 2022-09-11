@@ -7,6 +7,7 @@ import SpeedDialComponent from './components/SpeedDialComponent';
 import Profile from './components/Profile';
 import BuyerNftPage from './components/BuyerNftPage';
 import EachOwnedNFT from './components/EachOwnedNFT';
+import ContactPage from './components/ContactPage';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
     <Route path="/account" element={<Profile />} />
     <Route path="/nft/:id" element={<BuyerNftPage />} />
     <Route path="/account/mynft/:id" element={<EachOwnedNFT />} />
+    <Route path="/support" element={<ContactPage />} />
     </Routes>
     <Footer />
     </>
