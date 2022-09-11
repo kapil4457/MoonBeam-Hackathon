@@ -3,6 +3,10 @@ import { useState } from "react";
 import "../style.css";
 
 const ContactPage = () => {
+  const [Name, setName] = useState("");
+  const [Email, setEmail] = useState("");
+  const [Phone, setPhone] = useState("");
+  const [Message, setMessage] = useState("");
   return (
     <>
       <div class="container">
@@ -62,6 +66,8 @@ const ContactPage = () => {
                   name="name"
                   class="input"
                   placeholder="Username"
+                  value={Name}
+                  onChange={(e) => setName(e.target.value)}
                 />
               </div>
               <div class="input-container">
@@ -70,6 +76,8 @@ const ContactPage = () => {
                   name="email"
                   class="input"
                   placeholder="Email"
+                  value={Email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div class="input-container">
@@ -78,6 +86,8 @@ const ContactPage = () => {
                   name="phone"
                   class="input"
                   placeholder="Phone"
+                  value={Phone}
+                  onChange={(e) => setPhone(e.target.value)}
                 />
               </div>
               <div class="input-container textarea">
@@ -85,6 +95,8 @@ const ContactPage = () => {
                   name="message"
                   class="input"
                   placeholder="Message"
+                  value={Message}
+                  onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
               </div>
               <input type="submit" value="Send" class="btn" />
