@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { useNavigate, useParams } from "react-router-dom";
 
 const OwnedNFT = (props) => {
+  const navigate = useNavigate();
   return (
-    <Container>
+    <Container onClick={() => navigate(`myNFT/${props.id}`)}>
       <RedirectLink>
         <a href="#">
           <OpenInNewIcon />

@@ -13,6 +13,7 @@ const nftList = [
     unit: "Eth",
     purchaseDate: "2/2/2022",
     image: "temp.jpg",
+    id: "1",
   },
   {
     name: "Bored Ape #2",
@@ -21,6 +22,7 @@ const nftList = [
     unit: "Eth",
     purchaseDate: "2/2/2022",
     image: "temp.jpg",
+    id: "2",
   },
   {
     name: "Bored Ape #3",
@@ -29,6 +31,7 @@ const nftList = [
     unit: "Eth",
     purchaseDate: "2/2/2022",
     image: "temp.jpg",
+    id: "3",
   },
   {
     name: "Bored Ape #4",
@@ -37,6 +40,7 @@ const nftList = [
     unit: "Eth",
     purchaseDate: "2/2/2022",
     image: "temp.jpg",
+    id: "4",
   },
   {
     name: "Bored Ape #5",
@@ -45,6 +49,7 @@ const nftList = [
     unit: "Eth",
     purchaseDate: "2/2/2022",
     image: "temp.jpg",
+    id: "5",
   },
 ];
 
@@ -123,6 +128,7 @@ const Profile = () => {
                 HighestBid={eachNFT.HighestBid}
                 unit={eachNFT.unit}
                 purchaseDate={eachNFT.purchaseDate}
+                id={eachNFT.id}
               />
             );
           })}
