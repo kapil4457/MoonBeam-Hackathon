@@ -133,9 +133,9 @@ const BuyerNftPage = () => {
   return (
     <>
       <Container>
-        <Image>
+        <Photo>
           <img src={Data?.image} alt="" />
-        </Image>
+        </Photo>
         <Info>
           <div className="data">
             <div>Title : {Data?.title}</div>
@@ -168,7 +168,7 @@ const Container = styled.div`
   padding-top: 10rem;
   margin-bottom: 7rem;
 `;
-const Image = styled.div`
+const Photo = styled.div`
   width: 20%;
   height: 30rem;
   border-radius: 3rem;

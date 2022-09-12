@@ -76,6 +76,9 @@ const Search = styled.div`
     border-radius: 1rem;
     border: 0;
     outline: 0;
+    ::placeholder {
+      color: rgba(0, 0, 0, 0.6);
+    }
   }
   img {
     position: absolute;
